@@ -18,19 +18,16 @@ export const InputMessage = () => {
   }
 
   return (
-    <div className="c-send-message__item">
-      <div className="c-send-message__message">Message: </div>
-      <div className="c-send-message__form">
-        <form className="message-form__item" onSubmit={sendMessage}>
-          <input
-            className="message-form__input"
-            type="text"
-            onChange={handleChange}
-            value={message}
-          />
-          <button className="message-form__button">Send</button>
-        </form>
-      </div>
+    <div className="send-message-container">
+      <form className="send-message-form" onSubmit={sendMessage}>
+        <input
+          className="send-message-input"
+          type="text"
+          onChange={handleChange}
+          value={message}
+        />
+        <button className="send-message-button">Send</button>
+      </form>
     </div>
   );
 };

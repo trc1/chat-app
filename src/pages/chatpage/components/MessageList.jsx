@@ -8,7 +8,7 @@ export const MessageList = () => {
   return (
     <>
       <h2>{user.room}</h2>
-      <div className="c-messages">
+      <div className="info-messages">
         {messageArr.map((m) => {
           if (m.type === "JOIN") {
             return (
@@ -32,7 +32,7 @@ export const MessageList = () => {
             );
           } else {
             return (
-              <div className="{getWrapperClass(msg)}">
+              <div className="message-container">
                 <Message
                   id={Date.now()}
                   img={m.user.avatar}

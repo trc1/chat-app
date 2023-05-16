@@ -6,16 +6,16 @@ export const UserList = () => {
   const onlineUsers = membersArr.filter(
     (member) => member.id !== drone.clientId
   );
-  console.log("userrrrsss", membersArr);
+
   return (
-    <div className="c-member-list__item">
+    <div className="online-users-container">
       <div>Online:</div>
       {onlineUsers.map((member) => (
-        <div className="c-member-list__member__item" key={member.id}>
-          <span className="c-member-list__member__avatar">
+        <div className="online-user" key={member.id}>
+          <span className="online-user-avatar">
             <img src={member.clientData.avatar} width={70}></img>
           </span>
-          <span className="c-member-list__member__username">
+          <span className="online-user-username">
             {member.clientData.username}
           </span>
         </div>
