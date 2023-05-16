@@ -1,0 +1,19 @@
+.color-list {
+  list-style: none;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  .color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+  .color.active {
+    border: 4px solid;
+  }
+}

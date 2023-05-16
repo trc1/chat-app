@@ -1,0 +1,33 @@
+@import url("https://use.typekit.net/uec1bvy.css");
+
+#root {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  font-family: "coolvetica", Helvetica, sans-serif;
+}
+:root {
+  --font-color: #fffafb;
+  --background-color: #131515;
+  --link-color: #21649b;
+  --box-shadow-r: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  --box-shadow-l: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* 2 */
+[data-theme="light"] {
+  --font-color: #131515;
+  --background-color: #fffafb;
+  --link-color: #21649b;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  transition: background-color 0.3s ease-in-out;
+}

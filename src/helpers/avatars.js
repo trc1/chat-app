@@ -1,0 +1,17 @@
+export const avatars = [
+  "../../../src/assets/Avatars/avatar_1.svg",
+  "../../../src/assets/Avatars/avatar_2.svg",
+  "../../../src/assets/Avatars/avatar_3.svg",
+  "../../../src/assets/Avatars/avatar_4.svg",
+  "../../../src/assets/Avatars/avatar_5.svg",
+  "../../../src/assets/Avatars/avatar_6.svg",
+  "../../../src/assets/Avatars/avatar_7.svg",
+  "../../../src/assets/Avatars/avatar_8.svg",
+  "../../../src/assets/Avatars/avatar_9.svg",
+  "../../../src/assets/Avatars/avatar_10.svg",
+  "../../../src/assets/Avatars/avatar_11.svg",
+  "../../../src/assets/Avatars/avatar_12.svg",
+  "../../../src/assets/Avatars/avatar_13.svg",
+  "../../../src/assets/Avatars/avatar_14.svg",
+  "../../../src/assets/Avatars/avatar_15.svg",
+];

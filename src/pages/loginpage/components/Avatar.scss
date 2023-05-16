@@ -1,0 +1,48 @@
+.avatar-img-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  .avatar-icon {
+    fill: var(--background-color);
+    position: absolute;
+    top: 118px;
+    left: 119px;
+    z-index: 30;
+    cursor: pointer;
+  }
+  .avatar-button {
+    appearance: none;
+    position: absolute;
+    top: 110px;
+    left: 110px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--font-color);
+    box-shadow: none;
+    cursor: pointer;
+  }
+}
+.avatar-modal {
+  position: absolute;
+  background-color: var(--background-color);
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 40;
+}
+.avatar-img-modal {
+  width: 70px;
+
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  &:hover .avatar-img-modal:not(:hover) {
+    opacity: 0.5;
+  }
+}

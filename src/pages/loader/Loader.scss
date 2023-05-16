@@ -1,0 +1,34 @@
+.animation-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader-animation {
+  width: 500px;
+}
+.loader-animation path,
+.loader-animation rect,
+.loader-animation polygon {
+  stroke-width: 0.5;
+  stroke-dasharray: 1582;
+  stroke-dashoffset: 0;
+  animation: loader 4s ease-in-out forwards;
+}
+
+@keyframes loader {
+  0% {
+    fill: transparent;
+    stroke-dashoffset: 1584;
+  }
+
+  50% {
+    stroke-dashoffset: 850;
+  }
+
+  100% {
+    stroke: var(--font-color);
+    fill: var(--font-color);
+  }
+}

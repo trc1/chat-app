@@ -1,0 +1,28 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  height: 10%;
+  .header-logo{
+    width: 100px;
+  }
+  .header-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .logout {
+      border: none;
+      width: 120px;
+      height: 40px;
+      border-radius: 35px;
+      background-color: var(--font-color);
+      color: var(--background-color);
+      font-weight: bolder;
+      &:hover {
+        color: var(--link-color);
+      }
+    }
+  }
+}
