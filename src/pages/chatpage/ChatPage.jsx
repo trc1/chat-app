@@ -11,6 +11,7 @@ import {
   userNotification,
 } from "../../helpers/notifications";
 import "./ChatPage.scss";
+import { CurrentRoom } from "./components/CurrentRoom";
 
 export const ChatPage = () => {
   const { user, drone, setMessageArr, messageArr, setMembersArr, membersArr } =
@@ -125,6 +126,7 @@ export const ChatPage = () => {
         <div className="chat-container">
           <RoomList />
           <div className="messages-container">
+            <CurrentRoom />
             <MessageList />
             <InputMessage />
           </div>

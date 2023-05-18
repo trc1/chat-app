@@ -14,6 +14,8 @@
     }
   }
   .color.active {
-    border: 4px solid;
+    box-shadow: var(--box-shadow-d);
+    border: 4px solid var(--font-color);
+    transform: scale(1.2);
   }
 }

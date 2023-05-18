@@ -4,10 +4,10 @@
   border-radius: 50%;
   position: relative;
   .avatar-icon {
-    fill: var(--background-color);
+    fill: var(--font-color);
     position: absolute;
-    top: 118px;
-    left: 119px;
+    top: 115px;
+    left: 115px;
     z-index: 30;
     cursor: pointer;
   }
@@ -19,7 +19,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--font-color);
+    background-color: var(--background-color);
     box-shadow: none;
     cursor: pointer;
   }

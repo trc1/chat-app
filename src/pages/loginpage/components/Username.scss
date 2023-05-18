@@ -1,9 +1,10 @@
 .username {
   border: none;
   border-radius: 10px;
-  width: 70%;
-  height: 30px;
+  width: 73%;
+  height: 32px;
   padding-left: 10px;
-  background-color: var(--font-color);
-  color: var(--background-color);
+  background-color: transparent;
+  color: var(--font-color);
+  box-shadow: var(--box-shadow-d);
 }

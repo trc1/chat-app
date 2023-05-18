@@ -3,7 +3,7 @@
   width: 400px;
   height: 550px;
   padding: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box-shadow-main);
   border-radius: 30px;
   position: relative;
   overflow: hidden;

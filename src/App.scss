@@ -12,18 +12,26 @@
   gap: 50px;
 }
 :root {
-  --font-color: #fffafb;
-  --background-color: #131515;
+  --font-color: #c9c9c9;
+  --background-color: #353535;
   --link-color: #21649b;
-  --box-shadow-r: 10px 10px 20px rgba(0, 0, 0, 0.4);
-  --box-shadow-l: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  --box-shadow-color: rgba(39, 39, 39, 0.4);
+  --box-shadow-main: 10px 10px 20px var(--box-shadow-color);
+  --box-shadow-r: 5px 0px 5px -2px var(--box-shadow-color);
+  --box-shadow-l: -5px 0px 5px -2px var(--box-shadow-color);
+  --box-shadow-d: 0px 4px 10px var(--box-shadow-color);
 }
 
 /* 2 */
 [data-theme="light"] {
-  --font-color: #131515;
-  --background-color: #fffafb;
+  --font-color: #353535;
+  --background-color: #c9c9c9;
   --link-color: #21649b;
+  --box-shadow-color: rgba(83, 83, 83, 0.4);
+  --box-shadow-main: 10px 10px 20px var(--box-shadow-color);
+  --box-shadow-r: 5px 0px 5px -2px var(--box-shadow-color);
+  --box-shadow-l: -5px 0px 5px -2px var(--box-shadow-color);
+  --box-shadow-d: 0px 4px 10px var(--box-shadow-color);
 }
 body {
   background-color: var(--background-color);

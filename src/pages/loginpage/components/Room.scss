@@ -4,4 +4,10 @@
   height: 32px;
   border-radius: 10px;
   padding-left: 10px;
+  background-color: transparent;
+  color: var(--font-color);
+  box-shadow: var(--box-shadow-d);
+  option {
+    color: #3b3b3b;
+  }
 }
