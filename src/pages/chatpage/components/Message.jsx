@@ -1,6 +1,15 @@
 import React from "react";
+import "./Message.scss";
 
-export const Message = ({id, img, username, color, message, timestamp, className}) => {
+export const Message = ({
+  id,
+  img,
+  username,
+  color,
+  message,
+  timestamp,
+  className,
+}) => {
   return (
     <li className={className} key={id}>
       <div className="message__avatar">

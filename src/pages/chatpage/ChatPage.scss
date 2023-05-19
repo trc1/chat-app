@@ -3,20 +3,39 @@
   width: 70%;
   height: 70%;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  box-shadow: var(--box-shadow-main);
+  grid-template-columns: 0.5fr 1.5fr 0.5fr;
+  grid-template-rows: 0.2fr 2.6fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "rooms chat users"
+    "rooms chat users"
+    "rooms chat users";
   border-radius: 30px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-d);
 }
 .messages-container {
-  grid-area: 1 / 2 / 3 / 3;
-  display: flex;
-  flex-direction: column;
-
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 3fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header"
+    "message-list"
+    "input";
+  grid-area: chat;
 }
 .users-container {
-  grid-area: 1 / 3 / 3 / 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "current-user"
+    "user-list";
+  grid-area: users;
   box-shadow: var(--box-shadow-l);
+  position: relative;
+  background-color: var(--background-color);
+  overflow: hidden;
 }

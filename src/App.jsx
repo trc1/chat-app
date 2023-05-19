@@ -44,6 +44,7 @@ function App() {
     setUser({ ...user, room: value });
     setMessageArr([]);
   };
+
   const setTheme = (value) => {
     document.documentElement.setAttribute("data-theme", `${value}`);
   };

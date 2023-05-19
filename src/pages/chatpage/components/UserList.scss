@@ -1,0 +1,24 @@
+.online-users-container {
+  grid-area: user-list;
+  margin-top: 15px;
+  width: 100%;
+  .online-user-header {
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+  .online-user {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    &:hover {
+      height: 50px;
+      background-color: var(--background-color);
+      box-shadow: var(--box-shadow-d);
+    }
+    .online-user-img {
+      width: 30px;
+    }
+  }
+}

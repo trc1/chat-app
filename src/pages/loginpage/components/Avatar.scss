@@ -3,8 +3,11 @@
   height: 150px;
   border-radius: 50%;
   position: relative;
+  .avatar-img-main{
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.4));
+  }
   .avatar-icon {
-    fill: var(--font-color);
+    fill: var(--background-color);
     position: absolute;
     top: 115px;
     left: 115px;
@@ -19,7 +22,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--background-color);
+    background-color: var(--font-color);
     box-shadow: none;
     cursor: pointer;
   }
@@ -37,7 +40,6 @@
 }
 .avatar-img-modal {
   width: 70px;
-
   &:hover {
     transform: scale(1.2);
     cursor: pointer;

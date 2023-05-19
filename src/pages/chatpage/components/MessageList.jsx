@@ -11,7 +11,7 @@ export const MessageList = () => {
   const scrollToBottom = () => {
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
   };
-  console.log(Date.now());
+
   useEffect(() => {
     scrollToBottom();
   }, [messageArr]);
@@ -23,7 +23,8 @@ export const MessageList = () => {
             return (
               <Message
                 className="message-join"
-                id={Date.now() * Math.random()}
+                key={m.id}
+                id={m.id}
                 username={m.user.username}
                 message={m.message}
                 color={m.user.color}
@@ -34,7 +35,8 @@ export const MessageList = () => {
             return (
               <Message
                 className="message-left"
-                id={Date.now() * Math.random()}
+                key={m.id}
+                id={m.id}
                 username={m.user.username}
                 message={m.message}
                 color={m.user.color}
@@ -45,7 +47,8 @@ export const MessageList = () => {
             return (
               <Message
                 className="message"
-                id={Date.now() * Math.random()}
+                key={m.id}
+                id={m.id}
                 img={m.user.avatar}
                 username={m.user.username}
                 message={m.message}

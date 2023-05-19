@@ -1,0 +1,10 @@
+.current-room-header {
+  box-shadow: var(--box-shadow-d);
+  width: 100%;
+  position: relative;
+  grid-area: header;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 20px;
+}

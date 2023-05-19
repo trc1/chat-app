@@ -9,23 +9,35 @@ export const RoomList = () => {
   const handleClick = (e) => {
     selectedRooms(e.target.dataset.label);
   };
+
   return (
     <div className="room-container">
       {rooms.map((r) => {
         if (user.room === r.label) {
-          return <img key={r.label + new Date()} src={r.img} width={200} />;
+          return (
+            <div className="current-room" key={r.label}>
+              <img src={r.img} className="current-room-image" />
+            </div>
+          );
         }
       })}
-      <ul>
+      <ul className="room-list">
         {rooms.map((r) => {
           if (user.room !== r.label) {
             return (
               <li
-                onClick={handleClick}
-                key={r.value}
+                className="room-list-items"
+                key={Date.now() + r.label}
                 data-value={r.value}
                 data-label={r.label}
+                onClick={handleClick}
               >
+                <img
+                  src={r.img}
+                  data-value={r.value}
+                  data-label={r.label}
+                  className="room-list-image"
+                />
                 {r.label}
               </li>
             );

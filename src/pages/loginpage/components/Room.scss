@@ -7,7 +7,10 @@
   background-color: transparent;
   color: var(--font-color);
   box-shadow: var(--box-shadow-d);
+  &:hover {
+    cursor: pointer;
+  }
   option {
-    color: #3b3b3b;
+    color: #313131;
   }
 }

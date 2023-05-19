@@ -1,0 +1,9 @@
+.current-user{
+    grid-area: current-user;
+    box-shadow: var(--box-shadow-d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}

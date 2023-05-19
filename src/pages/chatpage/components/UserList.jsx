@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import UserContext from "../../../context/UserContext";
+import "./UserList.scss";
 
 export const UserList = () => {
   const { membersArr, drone } = useContext(UserContext);
@@ -8,18 +9,21 @@ export const UserList = () => {
   );
 
   return (
-    <div className="online-users-container">
-      <div>Online:</div>
+    <ul className="online-users-container">
+      <div className="online-user-header">Online:</div>
       {onlineUsers.map((member) => (
-        <div className="online-user" key={member.id}>
+        <li className="online-user" key={member.id}>
           <span className="online-user-avatar">
-            <img src={member.clientData.avatar} width={70}></img>
+            <img
+              className="online-user-img"
+              src={member.clientData.avatar}
+            ></img>
           </span>
           <span className="online-user-username">
             {member.clientData.username}
           </span>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
