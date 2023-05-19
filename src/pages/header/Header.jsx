@@ -22,11 +22,13 @@ export const Header = () => {
     <div className="header-container">
       <Logo className="header-logo" />
       <div className="header-buttons">
-        <input
+        <label htmlFor="toggle-mode" className="toggle-label"><input
           type="checkbox"
           className="toggle-mode"
+          id="toggle-mode"
           onChange={handleThemeChange}
-        />
+        /></label>
+        
         {user && renderLogout}
       </div>
     </div>

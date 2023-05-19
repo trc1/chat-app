@@ -12,12 +12,16 @@ export const Message = ({
 }) => {
   return (
     <li className={className} key={id}>
-      <div className="message__avatar">
-        <img src={img} width={30} />
+      <div className="message-avatar-wrapper">
+        <img className="message-avatar" src={img} />
       </div>
-      <div className="timestamp">{timestamp}</div>
-      <div className="message-username">
-        <div style={{ color: color }}>{username}</div>
+      <div className="message-wrapper-join">
+        <div className="message-username-wrapper">
+          <div className="message-username" style={{ color: color }}>
+            {username}
+          </div>
+          <div className="message-timestamp">{timestamp}</div>
+        </div>
         <div className="message-text">{message}</div>
       </div>
     </li>

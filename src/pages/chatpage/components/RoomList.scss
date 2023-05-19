@@ -35,7 +35,7 @@
     margin-bottom: 8px;
     z-index: 230;
     position: relative;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     &:hover {
       height: 50px;
       background-color: var(--background-color);
@@ -60,4 +60,21 @@
   left: 0;
   position: absolute;
   box-shadow: var(--box-shadow-r);
+}
+
+@media screen and (max-width: 480px) {
+  .room-container {
+    grid-template-rows: 1fr;
+    width: 70px;
+    height: 70px;
+    box-shadow: none;
+  }
+  .room-list {
+    display: none;
+  }
+  .current-room-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
 }

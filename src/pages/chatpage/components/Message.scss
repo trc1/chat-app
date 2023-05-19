@@ -1,9 +1,39 @@
-.message{
-    background-color: rgb(167, 167, 167);
+.message {
+  width: 100%;
+  display: flex;
+  .message-avatar {
+    width: 50px;
+  }
+  .message-username-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .message-username {
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+  .message-timestamp {
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+  .message-text {
+    opacity: 0.8;
+    font-size: .8rem;
+  }
 }
-.message-join{
-    background-color: red;
-}
-.message-left{
-    background-color: red;
+.message-join,
+.message-left {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  .message-text {
+    color: var(--font-color);
+    opacity: 0.5;
+  }
+  .message-wrapper-join {
+    display: flex;
+    gap: 10px;
+  }
 }
