@@ -38,6 +38,7 @@ export const Username = ({ getUsername, setError }) => {
       onChange={handleChange}
       placeholder="Username"
       className="username"
+      maxLength={15}
     />
   );
 };
