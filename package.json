@@ -1,5 +1,6 @@
 {
   "name": "chat-nick-app",
+  "author": "Dario Trcović",
   "private": true,
   "version": "0.0.0",
   "type": "module",
