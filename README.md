@@ -27,8 +27,8 @@ Install Node v16.14.0+.
 - [x] Room list
 - [x] Room change
 - [x] Loading animation
-- [x] Responsive
 - [ ] Add emojis
+- [ ] Responsive
 - [ ] See which user is typing
 - [ ] Add like button
 - [ ] Add chat history
