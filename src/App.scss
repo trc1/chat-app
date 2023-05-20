@@ -36,4 +36,10 @@
 body {
   background-color: var(--background-color);
   color: var(--font-color);
+  input:focus-visible {
+    outline: none;
+  }
+  select:focus-visible {
+    outline: none;
+  }
 }

@@ -62,12 +62,13 @@
   box-shadow: var(--box-shadow-r);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   .room-container {
     grid-template-rows: 1fr;
     width: 70px;
     height: 70px;
     box-shadow: none;
+    display: none;
   }
   .room-list {
     display: none;
@@ -76,5 +77,15 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .room-list .room-list-image {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  .room-list::after {
+    display: none;
   }
 }
