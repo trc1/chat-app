@@ -9,7 +9,7 @@ export const RoomList = ({ toggleRoom }) => {
   const handleClick = (e) => {
     selectedRooms(e.target.dataset.label);
   };
-
+console.log(toggleRoom)
   return (
     <div className={!toggleRoom ? "room-container hide" : "room-container"}>
       {rooms.map((r) => {

@@ -4,7 +4,7 @@ import "./CurrentRoom.scss";
 
 export const CurrentRoom = ({ getRoomOpen }) => {
   const { user } = useContext(UserContext);
-  const [roomOpen, setRoomOpen] = useState(false);
+  const [roomOpen, setRoomOpen] = useState(true);
 
   const handleRoomOpen = () => {
     setRoomOpen(!roomOpen);
