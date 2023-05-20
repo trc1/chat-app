@@ -18,19 +18,15 @@
   height: 40px;
   border-radius: 35px;
   border: none;
-  &:disabled {
-    opacity: 0.7;
-  }
-  &:disabled:hover {
-    opacity: 0.2;
-  }
-
   &:hover {
     border: 3px solid var(--font-color);
     transform: scale(1.1);
     font-weight: bold;
     color: var(--font-color);
     cursor: pointer;
+  }
+  &:disabled {
+    opacity: 0.7;
   }
 }
 .progress {

@@ -47,13 +47,15 @@
       width: 120px;
       height: 40px;
       border-radius: 35px;
-      background-color: var(--font-color);
-      color: var(--background-color);
+      background-color: var(--backgroun-color);
+      color: var(--font-color);
       font-weight: bolder;
       box-shadow: var(--box-shadow-d);
+      transition: 0.3s ease-in-out;
       &:hover {
-        color: var(--font-color);
-        background-color: var(--background-color);
+        color: var(--background-color);
+        background-color: var(--font-color);
+        cursor: pointer;
       }
     }
   }
