@@ -18,6 +18,7 @@ export const ChatPage = () => {
     useContext(UserContext);
 
   const [isReady, setIsReady] = useState(false);
+  const [toggleRoom, setToggleRoom] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -118,15 +119,19 @@ export const ChatPage = () => {
     return;
   }, 3000);
 
+  const getRoomOpen = (value) => {
+    setToggleRoom(value);
+  };
+
   return (
     <>
       {isReady ? (
         <Loader />
       ) : (
         <div className="chat-container">
-          <RoomList />
+          <RoomList toggleRoom={toggleRoom} />
           <div className="messages-container">
-            <CurrentRoom />
+            <CurrentRoom getRoomOpen={getRoomOpen} />
             <MessageList />
             <InputMessage />
           </div>

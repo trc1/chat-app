@@ -45,12 +45,14 @@
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows: 0.2fr 0.2fr 2.6fr 0.2fr;
     grid-template-areas:
       "rooms "
       "chat "
+      "chat "
       "chat";
     box-shadow: none;
+    border-radius: 0;
     .messages-container {
       width: 100%;
       height: 100%;
