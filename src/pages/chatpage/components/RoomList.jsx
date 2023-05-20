@@ -1,11 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { rooms } from "../../../helpers/rooms";
 import UserContext from "../../../context/UserContext";
 import "./RoomList.scss";
 
 export const RoomList = () => {
   const { selectedRooms, user } = useContext(UserContext);
-  console.log("droneee", user);
   const handleClick = (e) => {
     selectedRooms(e.target.dataset.label);
   };

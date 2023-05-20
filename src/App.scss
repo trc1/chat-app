@@ -12,8 +12,8 @@
   gap: 50px;
 }
 :root {
-  --font-color: #d9d9d9;
-  --background-color: #313131;
+  --font-color: #313131;
+  --background-color: #d9d9d9;
   --link-color: #21649b;
   --box-shadow-color: rgba(0, 0, 0, 0.4);
   --box-shadow-main: 10px 10px 20px var(--box-shadow-color);
@@ -23,9 +23,9 @@
 }
 
 /* 2 */
-[data-theme="light"] {
-  --font-color: #313131;
-  --background-color: #d9d9d9;
+[data-theme="dark"] {
+  --font-color: #d9d9d9;
+  --background-color: #313131;
   --link-color: #21649b;
   --box-shadow-color: rgba(0, 0, 0, 0.4);
   --box-shadow-main: 10px 10px 20px var(--box-shadow-color);

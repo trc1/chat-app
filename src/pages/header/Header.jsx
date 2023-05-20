@@ -8,9 +8,9 @@ export const Header = () => {
 
   const handleThemeChange = (e) => {
     if (e.target.checked) {
-      setTheme("light");
-    } else {
       setTheme("dark");
+    } else {
+      setTheme("light");
     }
   };
   const renderLogout = (

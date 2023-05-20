@@ -31,14 +31,14 @@
         appearance: none;
         width: 25px;
         height: 25px;
-        background: linear-gradient(180deg, #777, #3a3a3a);
+        background: linear-gradient(180deg, #dddddd, #a7a7a7);
         border-radius: 180px;
         box-shadow: var(--box-shadow-d);
         transition: 0.3s;
         cursor: pointer;
       }
       .toggle-mode:checked {
-        background: linear-gradient(180deg, #dddddd, #a7a7a7);
+        background: linear-gradient(180deg, #777, #3a3a3a);
         margin-left: 50%;
       }
     }
