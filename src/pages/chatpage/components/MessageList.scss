@@ -6,6 +6,7 @@
   grid-auto-flow: dense;
   grid-area: message-list;
   padding: 20px;
+  word-break: break-all;
 }
 .messages {
   display: flex;
