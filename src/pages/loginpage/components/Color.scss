@@ -17,5 +17,6 @@
     box-shadow: var(--box-shadow-d);
     border: 2px solid var(--font-color);
     transform: scale(1.2);
+    z-index: -1;
   }
 }

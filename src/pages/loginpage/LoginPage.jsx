@@ -8,6 +8,8 @@ import { Color } from "./components/Color";
 import "./LoginPage.scss";
 
 export const LoginPage = () => {
+  const { userLogin } = useContext(UserContext);
+
   const [username, setUsername] = useState("");
   const [avatar, setAvatar] = useState("");
   const [color, setColor] = useState("");
@@ -16,8 +18,6 @@ export const LoginPage = () => {
   const [progress, setProgress] = useState(0);
   const [progressSet, setProgressSet] = useState(false);
   const [colorClass, setColorClass] = useState("red");
-
-  const { userLogin } = useContext(UserContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,7 +49,7 @@ export const LoginPage = () => {
   useEffect(() => {
     let newProgress = 0;
 
-    if (username !== "") {
+    if (username !== "" && username.length <= 15) {
       newProgress += 25;
     }
     if (avatar !== "") {

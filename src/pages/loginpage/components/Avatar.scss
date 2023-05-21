@@ -1,3 +1,10 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
 .avatar-img-container {
   width: 150px;
   height: 150px;
@@ -28,6 +35,9 @@
 }
 .avatar-modal {
   position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
   background-color: var(--background-color);
   width: 400px;
   height: 300px;
@@ -35,7 +45,8 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  z-index: 40;
+  z-index: 400;
+  opacity: 1;
 }
 .avatar-img-modal {
   width: 70px;

@@ -6,16 +6,12 @@ import { UserList } from "./components/UserList";
 import { InputMessage } from "./components/InputMessage";
 import { MessageList } from "./components/MessageList";
 import { User } from "./components/User";
-import {
-  messageNotification,
-  userNotification,
-} from "../../helpers/notifications";
+import { messageNotification, userNotification } from "../../helpers/notifications";
 import "./ChatPage.scss";
 import { CurrentRoom } from "./components/CurrentRoom";
 
 export const ChatPage = () => {
-  const { user, drone, setMessageArr, messageArr, setMembersArr, membersArr } =
-    useContext(UserContext);
+  const { user, drone, setMessageArr, setMembersArr } = useContext(UserContext);
 
   const [isReady, setIsReady] = useState(false);
   const [toggleRoom, setToggleRoom] = useState(false);
@@ -29,18 +25,17 @@ export const ChatPage = () => {
 
   const roomEvent = (drone) => {
     const room = drone.subscribe(`observable-${user.room}`);
-    console.log(room, "roooooooom");
+
     room.on("open", (error) => {
       if (error) {
         console.log(error);
       }
-      console.log("connected to room", room);
     });
 
     room.on("members", (member) => {
       setMembersArr([...member]);
     });
-    console.log("room", room);
+
     room.on("member_join", (member) => {
       setMembersArr((prev) => {
         return [...prev, member];
@@ -65,6 +60,7 @@ export const ChatPage = () => {
           ];
         });
     });
+
     room.on("member_leave", (member) => {
       setMembersArr((prev) => {
         return prev.filter((mem) => mem.id !== member.id);
@@ -89,6 +85,7 @@ export const ChatPage = () => {
           ];
         });
     });
+    
     room.on("message", (message) => {
       const messageSound = new Audio(messageNotification);
       messageSound.volume = 0.1;

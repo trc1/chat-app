@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { avatars } from "../../../helpers/avatars";
 import "./Avatar.scss";
+
+const defaultValue = "./default.svg";
+
 export const Avatar = ({ getAvatar }) => {
   const [modal, setModal] = useState(true);
-  const [avatarModal, setAvatarModal] = useState("./default.svg");
+  const [avatarModal, setAvatarModal] = useState(defaultValue);
 
   const handleClick = (e) => {
     setAvatarModal(e.target.dataset.value);
@@ -51,7 +54,11 @@ export const Avatar = ({ getAvatar }) => {
           </label>
         </div>
       ) : (
-        <div className="avatar-modal"> {renderAvatars} </div>
+        <div className="modal-backdrop" onClick={() => {
+          setModal(true)
+        }}>
+          <div className="avatar-modal"> {renderAvatars} </div>
+        </div>
       )}
     </>
   );

@@ -4,9 +4,9 @@ import { Message } from "./Message";
 import "./MessageList.scss";
 
 export const MessageList = () => {
-  const { messageArr, user } = useContext(UserContext);
+  const { messageArr } = useContext(UserContext);
 
-  const messagesEndRef = useRef(null); // Ref used to scroll messages list to the latest message every time message is sent or received.
+  const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });

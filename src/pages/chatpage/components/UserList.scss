@@ -2,6 +2,8 @@
   grid-area: user-list;
   margin-top: 15px;
   width: 100%;
+  overflow-y: scroll;
+
   .online-user-header {
     margin-left: 15px;
     margin-bottom: 10px;

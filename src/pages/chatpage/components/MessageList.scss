@@ -6,24 +6,6 @@
   grid-auto-flow: dense;
   grid-area: message-list;
   padding: 20px;
-  scrollbar-width: thin;
-
-  &:-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    background-color: var(--background-color);
-  }
-
-  &::-webkit-scrollbar {
-    width: 10px;
-    background-color: var(--background-color);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: var(--box-shadow-d);
-    background-color: var(--font-color);
-  }
 }
 .messages {
   display: flex;
