@@ -24,6 +24,9 @@
     cursor: pointer;
   }
 }
+.header-label{
+  font-weight: bolder;
+}
 @media screen and (max-width: 700px) {
   .room-toggle {
     display: inline;
