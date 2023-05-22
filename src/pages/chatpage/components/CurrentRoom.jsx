@@ -14,7 +14,7 @@ export const CurrentRoom = ({ getRoomOpen }) => {
   return (
     <div className="current-room-header">
       <label className="header-label"htmlFor="room-toggle">{user.room}</label>
-      <button className="room-toggle" id="room-toggle" onClick={handleRoomOpen}>
+      <button className={roomOpen ? "room-toggle" : "room-toggle rotate"} id="room-toggle" onClick={handleRoomOpen}>
         <svg
           className="room-opener-icon"
           width="15"

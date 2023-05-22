@@ -24,14 +24,19 @@
     cursor: pointer;
   }
 }
-.header-label{
+.rotate {
+  transition: 0.2s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.header-label {
   font-weight: bolder;
 }
 @media screen and (max-width: 700px) {
   .room-toggle {
     display: inline;
   }
-  .current-room-header{
+  .current-room-header {
     padding: 10px;
   }
 }
