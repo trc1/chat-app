@@ -6,7 +6,10 @@ import { UserList } from "./components/UserList";
 import { InputMessage } from "./components/InputMessage";
 import { MessageList } from "./components/MessageList";
 import { User } from "./components/User";
-import { messageNotification, userNotification } from "../../helpers/notifications";
+import {
+  messageNotification,
+  userNotification,
+} from "../../helpers/notifications";
 import "./ChatPage.scss";
 import { CurrentRoom } from "./components/CurrentRoom";
 
@@ -14,7 +17,7 @@ export const ChatPage = () => {
   const { user, drone, setMessageArr, setMembersArr } = useContext(UserContext);
 
   const [isReady, setIsReady] = useState(false);
-  const [toggleRoom, setToggleRoom] = useState(false);
+  const [toggleHide, setToggleHide] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -85,7 +88,7 @@ export const ChatPage = () => {
           ];
         });
     });
-    
+
     room.on("message", (message) => {
       const messageSound = new Audio(messageNotification);
       messageSound.volume = 0.1;
@@ -117,7 +120,7 @@ export const ChatPage = () => {
   }, 3000);
 
   const getRoomOpen = (value) => {
-    setToggleRoom(value);
+    setToggleHide(value);
   };
 
   return (
@@ -126,13 +129,15 @@ export const ChatPage = () => {
         <Loader />
       ) : (
         <div className="chat-container">
-          <RoomList toggleRoom={toggleRoom} />
+          <RoomList toggleHide={toggleHide} />
           <div className="messages-container">
             <CurrentRoom getRoomOpen={getRoomOpen} />
             <MessageList />
             <InputMessage />
           </div>
-          <div className="users-container">
+          <div
+            className={toggleHide ? "users-container" : "users-container hide"}
+          >
             <User />
             <UserList />
           </div>

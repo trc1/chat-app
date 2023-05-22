@@ -24,3 +24,9 @@
     }
   }
 }
+@media screen and (max-width: 700px) {
+  .online-users-container {
+    overflow-y: scroll;
+    height: 150px;
+  }
+}

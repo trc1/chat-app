@@ -3,7 +3,7 @@ import { rooms } from "../../../helpers/rooms";
 import UserContext from "../../../context/UserContext";
 import "./RoomList.scss";
 
-export const RoomList = ({ toggleRoom }) => {
+export const RoomList = ({ toggleHide }) => {
   const { selectedRooms, user } = useContext(UserContext);
 
   const handleClick = (e) => {
@@ -11,7 +11,7 @@ export const RoomList = ({ toggleRoom }) => {
   };
 
   return (
-    <div className={!toggleRoom ? "room-container hide" : "room-container"}>
+    <div className={!toggleHide ? "room-container hide" : "room-container"}>
       {rooms.map((r) => {
         if (user.room === r.label) {
           return (

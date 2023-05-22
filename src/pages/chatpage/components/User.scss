@@ -10,3 +10,9 @@
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.4));
   }
 }
+
+@media screen and (max-width: 700px){
+  .current-user{
+    box-shadow: none;
+  }
+}
