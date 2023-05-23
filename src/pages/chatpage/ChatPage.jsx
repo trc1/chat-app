@@ -23,6 +23,7 @@ export const ChatPage = () => {
     if (user) {
       roomEvent(drone);
       setIsReady(true);
+      setToggleHide(false);
     }
   }, [user, drone]);
 
