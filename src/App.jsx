@@ -3,7 +3,7 @@ import { LoginPage } from "./pages/loginpage/LoginPage";
 import { ChatPage } from "./pages/chatpage/ChatPage";
 import { Header } from "./pages/header/Header";
 import UserContext from "./context/UserContext";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CHANNEL_ID } from "./helpers/scaledrone";
 import "./App.scss";
 

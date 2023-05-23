@@ -8,3 +8,17 @@
   color: var(--font-color);
   box-shadow: var(--box-shadow-d);
 }
+.input-counter {
+  position: absolute;
+  font-weight: 200;
+  top: 46%;
+  left: 79%;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1100px) {
+  .input-counter {
+    top: 47%;
+  }
+}

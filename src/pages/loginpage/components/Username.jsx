@@ -3,6 +3,7 @@ import "./Username.scss";
 
 export const Username = ({ getUsername, setError }) => {
   const [inputValue, setInputValue] = useState("");
+  const [counter, setCounter] = useState(15);
   const debouncedInputValue = useDebounce(inputValue, 500);
 
   function useDebounce(value, delay) {
@@ -29,16 +30,26 @@ export const Username = ({ getUsername, setError }) => {
   }, [debouncedInputValue, getUsername, setError]);
 
   const handleChange = (e) => {
-    setInputValue(e.target.value);
+    const value = e.target.value;
+    if (value.length < 15) {
+      setInputValue(value);
+      setCounter(15 - value.length);
+    } else {
+      setInputValue(value.substring(0, 15));
+      setCounter(0);
+    }
   };
 
   return (
-    <input
-      type="text"
-      onChange={handleChange}
-      placeholder="Username"
-      className="username"
-      maxLength={15}
-    />
+    <>
+      <input
+        type="text"
+        onChange={handleChange}
+        placeholder="Username"
+        className="username"
+        value={inputValue}
+      />
+      <span className="input-counter">{counter}</span>
+    </>
   );
 };
