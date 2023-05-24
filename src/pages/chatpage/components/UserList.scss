@@ -1,8 +1,8 @@
 .online-users-container {
   grid-area: user-list;
   width: 100%;
-  overflow-y: scroll;
-
+  overflow: auto;
+  word-break: break-all;
   .online-user-header {
     margin-top: 15px;
     margin-left: 15px;

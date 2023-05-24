@@ -2,7 +2,7 @@
   height: 100%;
   display: flex;
   flex-direction: column-reverse;
-  overflow-y: scroll;
+  overflow: auto;
   grid-auto-flow: dense;
   grid-area: message-list;
   padding: 20px;
