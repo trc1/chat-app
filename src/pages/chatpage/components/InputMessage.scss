@@ -31,8 +31,8 @@
       margin-right: 3%;
       background-color: transparent;
       transition: 0.3s ease-in-out;
-      .send-icon:hover {
-        transform: scale(1.3);
+      &:hover {
+        transform: scale(1.2);
         transform-origin: center center;
         cursor: pointer;
       }
