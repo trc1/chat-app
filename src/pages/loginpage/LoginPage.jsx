@@ -49,7 +49,7 @@ export const LoginPage = () => {
   useEffect(() => {
     let newProgress = 0;
 
-    if (username !== "" && username.length <= 15) {
+    if (username !== "") {
       newProgress += 25;
     }
     if (avatar !== "") {

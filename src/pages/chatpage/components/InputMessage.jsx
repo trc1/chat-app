@@ -13,14 +13,14 @@ export const InputMessage = () => {
     setMessage(e.target.value);
   };
 
-  function sendMessage(e) {
+  const sendMessage = (e) => {
     e.preventDefault();
     if (message && message.replace(/\s/g, "").length > 0) {
       publish(message);
       setMessage("");
       setToggleEmoji(false);
     }
-  }
+  };
 
   const getEmoji = (value) => {
     const emoji = value;

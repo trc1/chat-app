@@ -15,6 +15,7 @@ export const MessageList = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messageArr]);
+
   return (
     <div className="message-list-container">
       <ul className="messages">
