@@ -8,7 +8,6 @@ export const UserList = () => {
     (member) => member.id !== drone.clientId
   );
 
-  console.log(onlineUsers);
   return (
     <ul className="online-users-container">
       <div className="online-user-header">Online:</div>
