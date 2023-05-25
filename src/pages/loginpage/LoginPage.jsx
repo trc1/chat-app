@@ -14,16 +14,12 @@ export const LoginPage = () => {
   const [avatar, setAvatar] = useState("");
   const [color, setColor] = useState("");
   const [room, setRoom] = useState("");
-  const [error, setError] = useState(false);
   const [progress, setProgress] = useState(0);
   const [progressSet, setProgressSet] = useState(false);
   const [colorClass, setColorClass] = useState("red");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (username === "") {
-      setError(!error);
-    }
     userLogin(username, avatar, color, room);
   };
 
@@ -76,11 +72,7 @@ export const LoginPage = () => {
   return (
     <form className="login-page-container" onSubmit={handleSubmit}>
       <Avatar getAvatar={getAvatar} />
-      <Username
-        getUsername={getUsername}
-        username={username}
-        setError={setError}
-      />
+      <Username getUsername={getUsername} username={username} />
       <Room getRoom={getRoom} />
       <Color getColor={getColor} />
       <div

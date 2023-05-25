@@ -14,18 +14,16 @@ function App() {
   const [membersArr, setMembersArr] = useState([]);
 
   const userLogin = (username, avatar, color, room) => {
-    if (username) {
-      const drone = new window.Scaledrone(CHANNEL_ID, {
-        data: { username, avatar, color, room },
-      });
-      drone.on("open", (error) => {
-        if (error) {
-          console.log(error);
-        }
-        setDrone(drone);
-        setUser({ id: drone.clientId, username, avatar, color, room });
-      });
-    }
+    const drone = new window.Scaledrone(CHANNEL_ID, {
+      data: { username, avatar, color, room },
+    });
+    drone.on("open", (error) => {
+      if (error) {
+        console.log(error);
+      }
+      setDrone(drone);
+      setUser({ id: drone.clientId, username, avatar, color, room });
+    });
   };
 
   const userLogout = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Username.scss";
 
-export const Username = ({ getUsername, setError }) => {
+export const Username = ({ getUsername }) => {
   const [inputValue, setInputValue] = useState("");
   const [counter, setCounter] = useState(15);
   const debouncedInputValue = useDebounce(inputValue, 500);
@@ -23,11 +23,10 @@ export const Username = ({ getUsername, setError }) => {
   useEffect(() => {
     const delay = setTimeout(() => {
       getUsername(debouncedInputValue);
-      setError(false);
     }, 500);
 
     return () => clearTimeout(delay);
-  }, [debouncedInputValue, getUsername, setError]);
+  }, [debouncedInputValue, getUsername]);
 
   const handleChange = (e) => {
     const value = e.target.value;
